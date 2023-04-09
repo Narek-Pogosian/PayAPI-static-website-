@@ -1,0 +1,41 @@
+@use "../abstracts/" as *;
+
+.contact-main {
+  background-color: $light-bg;
+  padding-block: 3rem;
+
+  h1 {
+    @include page-title;
+
+    & + div {
+      @include flexColumn($align: center, $gap: 5rem);
+      padding-block: 2rem;
+
+      @include lg {
+        @include flexRow($align: center, $gap: 2rem);
+
+        & > div {
+          flex: 1;
+        }
+      }
+
+      h2 {
+        text-align: center;
+        color: $dark-text;
+        margin-bottom: 2rem;
+
+        @include lg {
+          text-align: left;
+        }
+      }
+
+      form {
+        max-width: 450px;
+
+        textarea {
+          resize: vertical;
+        }
+      }
+    }
+  }
+}

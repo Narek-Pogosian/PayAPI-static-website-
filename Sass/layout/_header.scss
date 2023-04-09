@@ -1,0 +1,82 @@
+@use "../abstracts/" as *;
+
+header {
+  background-color: $light-bg;
+}
+
+.header-container {
+  @include flexRow($justify: space-between);
+  height: 7rem;
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100dvh;
+    background-color: $dark-bg;
+    padding: 2rem;
+    z-index: 999;
+
+    &.active {
+      @include flexColumn();
+    }
+
+    @include md {
+      @include flexRow($justify: space-between);
+      position: static;
+      height: auto;
+      background-color: transparent;
+      padding: 0;
+      flex: 1;
+    }
+
+    .nav-links {
+      @include flexColumn($align: center, $gap: 1.5rem);
+      width: 100%;
+      padding-block: 2rem;
+
+      @include md {
+        @include flexRow($gap: 2rem);
+        padding-block: 0;
+        width: auto;
+        padding-inline-start: 3rem;
+      }
+
+      a {
+        font-size: 20px;
+        color: $light-bg;
+        font-weight: 600;
+
+        @include md {
+          font-size: 16px;
+          font-weight: 400;
+          color: $light-text;
+
+          &:hover {
+            color: $dark-text;
+          }
+        }
+      }
+    }
+  }
+}
+
+#open-menu-button {
+  @include md {
+    display: none;
+  }
+}
+
+.close-menu-wrapper {
+  border-bottom: 1px solid $light-text;
+  padding-top: 0.75rem;
+  padding-bottom: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+
+  @include md {
+    display: none;
+  }
+}

@@ -1,0 +1,75 @@
+@use "../abstracts/" as *;
+
+.contact-input {
+  border: none;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid $light-grey;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+
+  &:focus {
+    border-bottom: 2px solid $primary;
+  }
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact-checkbox {
+  @include flexRow($align: center, $gap: 1rem);
+
+  input {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.schedule-form {
+  max-width: 300px;
+  margin-inline: auto;
+  margin-block: 1.5rem;
+  position: relative;
+
+  @include md {
+    max-width: 400px;
+    margin-inline: 0;
+  }
+
+  input {
+    height: 51px;
+    padding-inline: 2rem;
+    width: 100%;
+    border: none;
+    border-radius: 2rem;
+    font-size: 16px;
+    margin-bottom: 1rem;
+    outline: none;
+
+    @include md {
+      margin-bottom: 0;
+    }
+
+    &:focus {
+      outline: 2px solid $primary;
+      outline-offset: -2px;
+    }
+
+    &::placeholder {
+      color: $light-text;
+    }
+  }
+
+  button {
+    width: 100%;
+
+    @include md {
+      position: absolute;
+      top: 0;
+      right: -40px;
+      width: auto;
+    }
+  }
+}

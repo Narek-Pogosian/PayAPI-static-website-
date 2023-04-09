@@ -1,0 +1,19 @@
+@use "../abstracts/" as *;
+
+.company-logos-container {
+  @include flexRow($justify: center, $gap: 1rem);
+
+  @include md {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  & > div {
+    @include flexColumn($gap: 3rem);
+
+    @include md {
+      @include flexRow($justify: space-between);
+      width: 490px;
+    }
+  }
+}

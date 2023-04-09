@@ -1,0 +1,42 @@
+@use "../abstracts/" as *;
+
+footer {
+  background-color: $dark-bg;
+  padding-block: 2rem;
+}
+
+.footer-container {
+  @include flexColumn($align: center);
+
+  @include md {
+    @include flexRow($gap: 3rem);
+  }
+
+  nav {
+    @include flexColumn();
+
+    @include md {
+      @include flexRow($justify: space-between);
+      flex: 1;
+    }
+
+    & > div:first-of-type {
+      @include flexColumn($gap: 1rem, $align: center);
+      padding-block: 2rem;
+      text-align: center;
+      width: 100%;
+
+      @include md {
+        @include flexRow($gap: 2rem);
+      }
+
+      a {
+        color: $white;
+      }
+    }
+
+    & > div:last-of-type {
+      @include flexRow($gap: 1rem);
+    }
+  }
+}

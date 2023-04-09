@@ -1,0 +1,88 @@
+@use "../abstracts/" as *;
+
+.pricing-main {
+  background-color: $light-bg;
+
+  h1 {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    text-align: center;
+    color: $dark-text;
+
+    @include md {
+      font-size: 2.5rem;
+    }
+
+    @include lg {
+      text-align: left;
+      font-size: 3.5rem;
+    }
+  }
+}
+
+.price-plans-container {
+  padding-block: 2rem;
+  @include flexColumn($gap: 4rem, $align: center);
+
+  @include md {
+    @include flexRow($gap: 2rem, $justify: space-between);
+  }
+}
+
+.price-plan {
+  @include flexColumn($align: center);
+  max-width: 20rem;
+
+  @include md {
+    align-items: start;
+  }
+
+  h2 {
+    color: $primary;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    @include paragraph-styling();
+    text-align: center;
+
+    @include md {
+      text-align: left;
+    }
+  }
+
+  &__price {
+    color: $dark-text;
+    font-family: "DM Serif Display", serif;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__includes {
+    border-top: 1px solid $light-grey;
+    border-bottom: 1px solid $light-grey;
+    padding-block: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .check-icon-wrapper {
+    width: 14px;
+    min-height: 14px;
+  }
+
+  &__item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .not-included {
+    color: #c7c6c6;
+  }
+}

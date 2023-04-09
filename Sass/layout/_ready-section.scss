@@ -1,0 +1,23 @@
+@use "../abstracts/" as *;
+
+.ready-section {
+  background-color: $light-bg;
+  padding-block: 2rem;
+
+  .container {
+    @include flexColumn($align: center, $gap: 1rem);
+
+    @include md {
+      @include flexRow($justify: space-around, $gap: 2rem, $align: center);
+
+      form {
+        width: 500px;
+      }
+    }
+  }
+
+  h2 {
+    color: $dark-text;
+    font-size: 2rem;
+  }
+}

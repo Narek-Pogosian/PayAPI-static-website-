@@ -1,0 +1,93 @@
+@use "../abstracts/" as *;
+
+.about-main {
+  background-color: $light-bg;
+
+  h1 {
+    @include page-title;
+  }
+}
+
+.about-info {
+  @include flexColumn($gap: 1rem, $align: center);
+  padding-block: 2rem;
+
+  @include lg {
+    @include flexRow($gap: 3rem);
+  }
+
+  h2 {
+    color: $dark-text;
+    font-size: 32px;
+
+    @include lg {
+      font-size: 48px;
+      flex: 1;
+      align-self: start;
+    }
+  }
+
+  p {
+    @include paragraph-styling;
+    text-align: center;
+
+    @include lg {
+      flex: 2;
+      text-align: left;
+    }
+  }
+}
+
+.about-numbers {
+  border-top: 1px solid $light-grey;
+  border-bottom: 1px solid $light-grey;
+  padding-block: 1rem;
+  margin-bottom: 2rem;
+  @include flexColumn($gap: 1rem, $align: center);
+
+  @include md {
+    @include flexRow($gap: 2rem, $justify: space-between, $align: center);
+    border: 0;
+  }
+
+  & > div {
+    @include flexColumn($gap: 1rem, $align: center);
+
+    @include md {
+      border-top: 1px solid $light-grey;
+      border-bottom: 1px solid $light-grey;
+      padding-block: 1rem;
+      flex: 1;
+    }
+
+    p:first-of-type {
+      color: $dark-text;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    p:last-of-type {
+      color: $primary;
+      font-size: 48px;
+      font-family: "DM Serif Display", serif;
+    }
+  }
+}
+
+.about-image-wrapper {
+  height: 300px;
+  background-image: url("../../assets/about/mobile/image-team-members.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-block: 4rem;
+
+  @include sm {
+    background-image: url("../../assets/about/tablet/image-team-members.jpg");
+    height: 200px;
+  }
+
+  @include lg {
+    height: 500px;
+    background-image: url("../../assets/about/desktop/image-team-members.jpg");
+  }
+}

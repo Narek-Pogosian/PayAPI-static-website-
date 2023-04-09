@@ -1,0 +1,75 @@
+@use "./colors" as *;
+
+@mixin sm {
+  @media (min-width: 376px) {
+    @content;
+  }
+}
+@mixin md {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin page-title {
+  color: $dark-text;
+  text-align: center;
+  max-width: 580px;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+
+  @include md {
+    font-size: 48px;
+  }
+
+  @include lg {
+    max-width: 680px;
+    font-size: 54px;
+    margin-inline: 0;
+    text-align: left;
+  }
+}
+
+@mixin paragraph-styling($color: $light-text) {
+  color: $color;
+  line-height: 1.5rem;
+}
+
+@mixin flexRow($justify: start, $align: center, $gap: 0) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin flexColumn($justify: start, $align: start, $gap: 0) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin btn-outline($outline-color, $text-color) {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  color: $outline-color;
+  border: 1px solid $outline-color;
+  font-size: 16px;
+  background-color: transparent;
+  transition: 200ms;
+
+  &:hover {
+    background-color: $outline-color;
+    color: $text-color;
+  }
+}

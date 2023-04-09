@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../script.js" defer></script>
+    <title>PayAPI</title>
+  </head>
+  <body>
+    <header>
+      <div class="container header-container">
+        <a href="../index.html"><img src="../assets/logo.svg" alt="logo" /></a>
+        <button
+          class="btn-menu"
+          id="open-menu-button"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <img src="../assets/icons/mobile-menu/menu.svg" alt="menu" />
+        </button>
+        <nav id="primary-navigation">
+          <div class="close-menu-wrapper">
+            <button
+              class="btn-menu"
+              id="close-menu-button"
+              aria-controls="primary-navigation"
+              aria-expanded="false"
+            >
+              <img src="../assets/icons/mobile-menu/close.svg" alt="close" />
+            </button>
+          </div>
+          <div class="nav-links">
+            <a href="./pricing.html">Pricing</a>
+            <a href="./about.html">About</a>
+            <a href="#">Contact</a>
+          </div>
+          <button class="btn-primary">Schedule a Demo</button>
+        </nav>
+      </div>
+    </header>
+    <main class="contact-main">
+      <div class="container">
+        <h1>Submit a help request and we'll get in touch shortly.</h1>
+        <div>
+          <div class="contact-form-wrapper">
+            <form>
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Name"
+                  class="contact-input"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="Email Address"
+                  class="contact-input"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="company-name"
+                  id="company-name"
+                  placeholder="Company Name"
+                  class="contact-input"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="title"
+                  id="title"
+                  placeholder="Title"
+                  class="contact-input"
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Message"
+                  rows="5"
+                  class="contact-input"
+                ></textarea>
+              </div>
+              <div class="form-group contact-checkbox">
+                <input type="checkbox" name="checkbox" id="checkbox" />
+                <label for="checkbox"
+                  >Stay up-to-date with company announcements and updates to our
+                  API</label
+                >
+              </div>
+              <button class="btn-outline-dark">Submit</button>
+            </form>
+          </div>
+          <div>
+            <h2>Join the thousands of innovators already building with us</h2>
+            <div class="company-logos-container">
+              <div>
+                <img src="../assets/clients/tesla-dark.svg" alt="tesla" />
+                <img
+                  src="../assets/clients/microsoft-dark.svg"
+                  alt="microsoft"
+                />
+                <img
+                  src="../assets/clients/hewlett-packard-dark.svg"
+                  alt="hewlett-packard"
+                />
+              </div>
+              <div>
+                <img src="../assets/clients/oracle-dark.svg" alt="oracle" />
+                <img src="../assets/clients/google-dark.svg" alt="google" />
+                <img src="../assets/clients/nvidia-dark.svg" alt="nvidia" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container footer-container">
+        <a href="../index.html"
+          ><img src="../assets/logoFooter.svg" alt="logo"
+        /></a>
+        <nav>
+          <div>
+            <a href="./pricing.html">Pricing</a>
+            <a href="./about.html">About</a>
+            <a href="#">Contact</a>
+          </div>
+          <div>
+            <a href="#"
+              ><img src="../assets/icons/shared/facebook.svg" alt="facebook"
+            /></a>
+            <a href="#"
+              ><img src="../assets/icons/shared/twitter.svg" alt="twitter"
+            /></a>
+            <a href="#"
+              ><img src="../assets/icons/shared/linkedin.svg" alt="linkedin"
+            /></a>
+          </div>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
