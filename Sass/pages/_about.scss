@@ -76,18 +76,18 @@
 
 .about-image-wrapper {
   height: 300px;
-  background-image: url("../../assets/about/mobile/image-team-members.jpg");
+  background-image: url("./assets/about/mobile/image-team-members.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin-block: 4rem;
 
   @include sm {
-    background-image: url("../../assets/about/tablet/image-team-members.jpg");
+    background-image: url("./assets/about/tablet/image-team-members.jpg");
     height: 200px;
   }
 
   @include lg {
     height: 500px;
-    background-image: url("../../assets/about/desktop/image-team-members.jpg");
+    background-image: url("./assets/about/desktop/image-team-members.jpg");
   }
 }
