@@ -713,6 +713,14 @@ footer {
   gap: 1rem;
 }
 
+.page {
+  display: flex;
+  flex-direction: column;
+}
+.page main {
+  flex: 1;
+}
+
 .ready-section {
   background-color: #edf3f8;
   padding-block: 2rem;
